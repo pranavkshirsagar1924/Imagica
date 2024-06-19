@@ -9,7 +9,7 @@ export default async function handler(req, res) {
             {
                 params: { query, per_page: 20 },
                 headers: {
-                    Authorization: "3F5Q1kY3jFYMs27tFm0bh6EEHlJfvVOAEcK8do9QKHVaQUcIJNajlPDM",
+                    Authorization: "your pexels api key",
                 },
             }
         );
