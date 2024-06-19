@@ -1,0 +1,172 @@
+.main {
+  display: flex;
+  flex-direction: row;
+}
+
+.sideBar {
+  width: 20%;
+  height: 100vh;
+  border-right: 1.5px solid #fff;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+.hs_button {
+  cursor: pointer;
+  width: 90%;
+  padding: 1rem;
+  border-radius: 5px;
+  margin: 0.6rem;
+  background-color: rgb(39, 39, 39);
+  font-size: 1rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.mainpanel {
+  width: 80%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  width: 90%;
+  height: fit-content;
+  border-radius: 3px;
+  margin: 0.5rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.inputBox {
+  width: 70%;
+  padding: 0.5rem;
+}
+
+.button_36 {
+  cursor: pointer;
+  background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  margin-left: 0.5rem;
+  flex-shrink: 0;
+  font-family: "Inter UI", "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  height: 3rem;
+  padding: 0 1.6rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all 0.5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button_36:hover {
+  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+  transition-duration: 0.1s;
+}
+
+@media (min-width: 768px) {
+  .button_36 {
+    padding: 0 2.6rem;
+  }
+}
+
+.showhistoryPanel {
+  display: none;
+}
+
+.board {
+  height: 100vh;
+  width: 100%;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 2fr));
+  grid-auto-rows: 70px; /* Base row height */
+  grid-gap: 5px;
+  row-gap: 35px;
+}
+
+.p {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.imageContainer {
+  margin-top: 3rem;
+  padding: 0.5rem;
+  border-radius: 10px;
+  transition: 0.5s;
+}
+
+.imageContainer:hover {
+  padding: 1.5rem;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover; /* Ensure images cover the container without distortion */
+}
+
+.title {
+  font-family: cursive;
+}
+
+.loader {
+  margin-left: 1rem;
+  width: 50px;
+  --b: 8px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  padding: 1px;
+  background: conic-gradient(#0000 10%, #5643CC) content-box;
+  -webkit-mask:
+    repeating-conic-gradient(#0000 0deg, #000 1deg 20deg, #0000 21deg 36deg),
+    radial-gradient(farthest-side, #0000 calc(100% - var(--b) - 1px), #000 calc(100% - var(--b)));
+  -webkit-mask-composite: destination-in;
+  mask-composite: intersect;
+  animation: l4 1s infinite steps(10);
+}
+
+@keyframes l4 {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+@media screen and (max-width: 670px) {
+  .sideBar {
+    position: absolute;
+    top: 90%;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    background: black;
+  }
+  .hs_button{
+    display: inline-block;
+    transition: 0.5;
+    white-space: nowrap;
+    margin-right: 10px;
+    position: relative;
+  }
+  .mainpanel {
+    width: 100%;
+  }
+  .board {
+    height: 100vh;
+    width: 100%;
+    overflow: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
+    grid-auto-rows: 10px; /* Base row height */
+    grid-gap: 5px;
+    row-gap: 35px;
+  }
+}
